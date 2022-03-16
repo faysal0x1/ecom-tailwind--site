@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    body {
+        @apply font-poppins;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-roboto;
+    }
+}
+
+@layer components {
+    .size-selector input:checked+label {
+        @apply bg-primary text-white
+    }
+    .color-selector input:checked+label {
+        @apply ring-2 ring-primary
+    }
+}
+
+@layer utilities {
+    .btn {
+        @apply block w-full px-8 text-white transition border bg-primary border-primary rounded-r-md
+    }
+}
